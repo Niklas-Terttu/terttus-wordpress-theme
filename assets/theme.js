@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('terttus-ready');});
+document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('terttus-ready')});

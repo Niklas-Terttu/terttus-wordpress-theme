@@ -1,6 +1,1 @@
-{
-  "version": "1.0.0",
-  "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
-  "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "requires_php": "7.4"
-}
+{"version":"1.0.0","download_url":"https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip","details_url":"https://github.com/Niklas-Terttu/terttus-wordpress-theme","requires_php":"7.4"}
