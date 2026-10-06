@@ -1,0 +1,3 @@
+<?php
+if(!defined('ABSPATH'))exit;
+function terttus_storefront_customize($w){$w->add_setting('hero_image',['sanitize_callback'=>'absint']);$w->add_control(new WP_Customize_Media_Control($w,'hero_image',['label'=>'Hero billede','section'=>'terttus_shop','mime_type'=>'image']));foreach(['promo_title'=>['Kampagne overskrift','Smart home uden besvær'],'promo_text'=>['Kampagne tekst','Find udstyret til dit næste projekt hos Terttus.']] as$id=>$v){$w->add_setting($id,['default'=>$v[1],'sanitize_callback'=>'sanitize_text_field']);$w->add_control($id,['section'=>'terttus_shop','label'=>$v[0],'type'=>'text']);}}add_action('customize_register','terttus_storefront_customize',20);

@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('terttus-ready')});
+document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('terttus-ready');const b=document.querySelector('.tt-mobile-toggle'),n=document.querySelector('#tt-primary-nav');if(b&&n)b.addEventListener('click',function(){const o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o?'true':'false')});});

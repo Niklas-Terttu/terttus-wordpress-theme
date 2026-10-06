@@ -1,1 +1,1 @@
-<?php get_header();?><div class="tt-container tt-content"><?php woocommerce_content();?></div><?php get_footer();?>
+<?php get_header();?><div class="tt-container tt-shop-shell"><?php if(is_shop()||is_product_taxonomy()):?><header class="tt-shop-head"><?php if(function_exists('woocommerce_breadcrumb'))woocommerce_breadcrumb();?><h1><?php woocommerce_page_title();?></h1><?php do_action('woocommerce_archive_description');?></header><?php endif;?><?php woocommerce_content();?></div><?php get_footer();?>
