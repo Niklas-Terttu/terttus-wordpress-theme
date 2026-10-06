@@ -1,0 +1,1 @@
+<?php get_header();?><div class="tt-container tt-content"><h1>Ups – siden blev ikke fundet</h1><p>Den side du leder efter findes ikke længere eller er blevet flyttet.</p><a class="tt-btn" href="<?php echo esc_url(home_url('/'));?>">Til forsiden</a></div><?php get_footer();?>
