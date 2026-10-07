@@ -1,7 +1,7 @@
 {
-  "version": "1.4.7",
+  "version": "1.4.8",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Bruger præcise WooCommerce-selektorer til at holde selv ubrudte produktnavne inde i købskortet og nulstiller browserens standarddesign på antal-feltet.",
+  "description": "Retter produktoverskriftens tekstbredde, så lange produktnavne holdes inde i købskortet.",
   "requires_php": "7.4"
 }
