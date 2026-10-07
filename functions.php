@@ -14,7 +14,8 @@ add_filter('body_class','terttus_body_classes');
 
 function terttus_category_mega_menu(){
  if(!class_exists('WooCommerce')){wp_nav_menu(['theme_location'=>'primary','container'=>false,'fallback_cb'=>false]);return;}
- $parents=get_terms(['taxonomy'=>'product_cat','hide_empty'=>false,'parent'=>0,'orderby'=>'menu_order','order'=>'ASC']);
+ $uncategorized_id=(int)get_option('default_product_cat',0);
+ $parents=get_terms(['taxonomy'=>'product_cat','hide_empty'=>false,'parent'=>0,'exclude'=>$uncategorized_id?[$uncategorized_id]:[],'orderby'=>'menu_order','order'=>'ASC']);
  if(is_wp_error($parents)||!$parents){wp_nav_menu(['theme_location'=>'primary','container'=>false,'fallback_cb'=>false]);return;}
  echo '<ul class="tt-mega-root">';
  foreach($parents as$parent){
