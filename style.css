@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.3.2
+Version: 1.3.3
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -52,3 +52,29 @@ body.terttus-full-width .tt-elementor-content{width:100%}
 .tt-shop-filters h2{font-size:20px;margin:0 0 18px}.tt-filter-group{padding:16px 0;border-top:1px solid var(--tt-border)}.tt-filter-group:first-of-type{border-top:0;padding-top:0}.tt-filter-group h3{font-size:14px;margin:0 0 10px}.tt-filter-list{list-style:none;margin:0;padding:0}.tt-filter-list li{margin:7px 0}.tt-filter-list a{text-decoration:none;color:var(--tt-muted);font-size:14px}.tt-filter-list a:hover,.tt-filter-list a.is-active{color:var(--tt-teal);font-weight:800}.tt-filter-price{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tt-filter-price input{width:100%;border:1px solid var(--tt-border);border-radius:9px;padding:9px}.tt-filter-submit{width:100%;margin-top:10px;cursor:pointer}.tt-filter-clear{display:block;margin-top:12px;text-align:center;font-size:13px}
 .tt-shop-products ul.products{width:100%}
 @media(max-width:900px){.tt-shop-layout{grid-template-columns:1fr}.tt-shop-filters{position:static}.tt-shop-toolbar{align-items:stretch;flex-direction:column}.tt-shop-toolbar select{width:100%}}
+
+/* 1.3.3 denser desktop storefront */
+@media(min-width:901px){
+ .tt-container{width:min(1280px,calc(100% - 56px))}
+ .tt-header-main{grid-template-columns:160px 1fr auto auto;gap:18px;padding:14px 0}
+ .tt-brand{font-size:27px}.custom-logo{max-height:44px}
+ .woocommerce-product-search input,.search-form input{padding:11px 14px}
+ .tt-category-nav .tt-container{width:min(1280px,calc(100% - 56px))}
+ .tt-mega-inner{width:min(1280px,calc(100% - 56px))}
+ .tt-content{padding:30px 0}.tt-shop-shell{padding:26px 0 48px}
+ .tt-shop-head h1{font-size:clamp(28px,3vw,40px)}
+ .woocommerce div.product{padding:24px 0}
+ .woocommerce div.product .summary{padding:24px}
+ .woocommerce div.product .product_title{font-size:clamp(26px,2.5vw,36px);line-height:1.18}
+ .woocommerce div.product p.price,.woocommerce div.product span.price{font-size:24px!important}
+ .woocommerce div.product div.images{margin-bottom:24px}
+ .woocommerce div.product div.images img{max-height:520px;object-fit:contain}
+ .woocommerce div.product .woocommerce-tabs{padding-top:22px}
+ .tt-product-benefits{margin:14px 0;font-size:13px}
+ .tt-section{padding:24px 0 42px}.tt-section-title{font-size:30px;margin-bottom:18px}
+ .woocommerce ul.products{column-gap:20px;row-gap:26px}
+ .woocommerce ul.products li.product{padding:14px!important}
+ .woocommerce ul.products li.product .woocommerce-loop-product__title{font-size:15px!important}
+ .woocommerce ul.products li.product .price{font-size:17px!important}
+ .tt-footer{margin-top:42px}.tt-footer-grid{padding:42px 0}
+}
