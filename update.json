@@ -1,7 +1,7 @@
 {
-  "version": "1.4.1",
+  "version": "1.4.2",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Retter lange produktnavne på desktop og mobil og viser alle Terttus Commerce-specifikationer på produktsiden.",
+  "description": "Gør produktvisningen mere kompakt på desktop og mobil, reducerer lange produktnavne og holder tilbudsbadget sikkert inde i produktkortet.",
   "requires_php": "7.4"
 }
