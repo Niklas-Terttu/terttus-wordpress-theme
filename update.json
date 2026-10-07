@@ -1,7 +1,7 @@
 {
-  "version": "1.5.1",
+  "version": "1.5.2",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Centrerer hele kategorimenuen korrekt som én samlet gruppe, inklusive Tilbud.",
+  "description": "Fjerner pile fra hovedkategorier og gør kategorier med undermenu til klik-knapper, der åbner menuen uden at navigere væk.",
   "requires_php": "7.4"
 }
