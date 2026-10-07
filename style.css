@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.4.2
+Version: 1.4.3
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -167,4 +167,31 @@ body.terttus-full-width .tt-elementor-content{width:100%}
  body.single-product .woocommerce div.product div.images img{max-height:300px!important}
  body.single-product .woocommerce div.product div.summary{padding:14px!important}
  body.single-product .woocommerce div.product .product_title{font-size:22px!important;line-height:1.12!important}
+}
+
+/* 1.4.3 refined electronics-store product layout */
+@media(min-width:901px){
+ body.single-product .tt-shop-shell{max-width:1060px!important}
+ body.single-product .woocommerce div.product{grid-template-columns:470px 450px!important;column-gap:42px!important}
+ body.single-product .woocommerce div.product div.images{width:470px!important;max-width:470px!important}
+ body.single-product .woocommerce div.product div.images .woocommerce-product-gallery__wrapper{min-height:280px!important;max-height:310px!important}
+ body.single-product .woocommerce div.product div.images img{max-width:420px!important;max-height:295px!important}
+ body.single-product .woocommerce div.product div.summary{width:450px!important;max-width:450px!important;padding:18px 20px!important}
+ body.single-product .woocommerce div.product .product_title{font-size:21px!important;line-height:1.15!important;margin-bottom:13px!important}
+ body.single-product .woocommerce-product-details__short-description{font-size:12.5px!important;line-height:1.45!important;color:#52636d!important;margin:0 0 14px!important}
+ body.single-product .woocommerce div.product p.price,body.single-product .woocommerce div.product span.price{font-size:19px!important;margin-bottom:14px!important}
+ body.single-product .product_meta{margin-top:13px!important;padding-top:12px!important;border-top:1px solid var(--tt-border);font-size:11.5px!important;line-height:1.55!important;color:#71808a!important}
+}
+.single-product .onsale{top:12px!important;left:12px!important;right:auto!important;margin:0!important;min-width:46px!important;min-height:46px!important;line-height:46px!important;font-size:11px!important;z-index:5}
+.single-product .woocommerce-product-gallery{position:relative}
+.single-product .woocommerce-product-gallery .flex-control-thumbs{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin-top:12px!important}
+.single-product .woocommerce-product-gallery .flex-control-thumbs li{width:58px!important;float:none!important}
+.single-product .woocommerce-product-gallery .flex-control-thumbs img{width:58px!important;height:58px!important;object-fit:contain!important;border:1px solid var(--tt-border)!important;border-radius:8px!important;padding:4px!important;box-sizing:border-box!important}
+.single-product .tt-product-benefits{border-top:1px solid var(--tt-border);padding-top:12px!important;margin-top:14px!important}
+.single-product .tt-product-specs{margin-top:28px!important}
+@media(max-width:900px){
+ body.single-product .woocommerce div.product .product_title{font-size:20px!important;line-height:1.15!important;margin-bottom:12px!important}
+ body.single-product .woocommerce-product-details__short-description{font-size:13px!important;line-height:1.45!important;color:#52636d!important}
+ body.single-product .product_meta{font-size:11.5px!important;line-height:1.55!important;border-top:1px solid var(--tt-border);padding-top:10px!important}
+ .single-product .onsale{top:8px!important;left:8px!important;min-width:42px!important;min-height:42px!important;line-height:42px!important;font-size:10px!important}
 }
