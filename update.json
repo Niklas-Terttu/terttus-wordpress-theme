@@ -1,7 +1,7 @@
 {
-  "version": "1.3.7",
+  "version": "1.3.8",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Tilbud-knappen i hovedmenuen linker nu direkte til WooCommerce-kategorien Tilbud.",
+  "description": "Fjerner dobbelt kategorititel på produktarkiver og sikrer at lange produktnavne bliver inde i produktkortet.",
   "requires_php": "7.4"
 }
