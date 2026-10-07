@@ -1,7 +1,7 @@
 {
-  "version": "1.4.8",
+  "version": "1.4.9",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Retter produktoverskriftens tekstbredde, så lange produktnavne holdes inde i købskortet.",
+  "description": "Centrerer produktkategorierne i hovednavigationen.",
   "requires_php": "7.4"
 }
