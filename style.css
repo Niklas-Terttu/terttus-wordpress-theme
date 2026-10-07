@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.3.7
+Version: 1.3.8
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -115,3 +115,8 @@ body.terttus-full-width .tt-elementor-content{width:100%}
  body.single-product .tt-product-benefits{font-size:11px!important;margin:9px 0!important}
  body.single-product .product_meta{font-size:12px!important}
 }
+
+/* 1.3.8 archive title + product card fixes */
+.woocommerce ul.products li.product .woocommerce-loop-product__title{overflow-wrap:anywhere;word-break:normal;hyphens:auto;line-height:1.28;min-height:2.56em}
+.woocommerce ul.products li.product{min-width:0;overflow:hidden}
+.woocommerce ul.products li.product a{min-width:0}
