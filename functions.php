@@ -1,5 +1,5 @@
 <?php
-if(!defined('ABSPATH'))exit;define('TERTTUS_VERSION','1.3.5');define('TERTTUS_UPDATE_METADATA','https://raw.githubusercontent.com/Niklas-Terttu/terttus-wordpress-theme/main/update.json');
+if(!defined('ABSPATH'))exit;define('TERTTUS_VERSION','1.3.6');define('TERTTUS_UPDATE_METADATA','https://raw.githubusercontent.com/Niklas-Terttu/terttus-wordpress-theme/main/update.json');
 function terttus_setup(){add_theme_support('title-tag');add_theme_support('post-thumbnails');add_theme_support('custom-logo',['height'=>80,'width'=>260,'flex-height'=>true,'flex-width'=>true]);add_theme_support('woocommerce');add_theme_support('wc-product-gallery-zoom');add_theme_support('wc-product-gallery-lightbox');add_theme_support('wc-product-gallery-slider');register_nav_menus(['primary'=>'Primær menu','footer'=>'Footer menu']);}add_action('after_setup_theme','terttus_setup');
 function terttus_assets(){wp_enqueue_style('terttus-style',get_stylesheet_uri(),[],TERTTUS_VERSION);wp_enqueue_script('terttus-theme',get_template_directory_uri().'/assets/theme.js',[],TERTTUS_VERSION,true);}add_action('wp_enqueue_scripts','terttus_assets');
 function terttus_customize($w){$w->add_section('terttus_shop',['title'=>'Terttus webshop','priority'=>30]);$x=['shipping_text'=>['Topbar tekst','🚚 Fri fragt ved køb over 499 kr. · Levering 1–3 hverdage'],'hero_title'=>['Hero overskrift','Gør dit hjem smartere med Terttus'],'hero_text'=>['Hero tekst','IT, elektronik og smart home – udvalgt af en entusiast, til fornuftige priser og med ordentlig support.']];foreach($x as$id=>$v){$w->add_setting($id,['default'=>$v[1],'sanitize_callback'=>'sanitize_text_field']);$w->add_control($id,['section'=>'terttus_shop','label'=>$v[0],'type'=>'text']);}}add_action('customize_register','terttus_customize');
@@ -19,6 +19,7 @@ function terttus_category_mega_menu(){
  if(is_wp_error($parents)||!$parents){wp_nav_menu(['theme_location'=>'primary','container'=>false,'fallback_cb'=>false]);return;}
  echo '<ul class="tt-mega-root">';
  foreach($parents as$parent){
+  if(get_term_meta($parent->term_id,'_tpm_show_mega',true)==='no')continue;
   $children=get_terms(['taxonomy'=>'product_cat','hide_empty'=>false,'parent'=>$parent->term_id,'orderby'=>'menu_order','order'=>'ASC']);
   if(is_wp_error($children))$children=[];
   $has=!empty($children);
@@ -26,9 +27,10 @@ function terttus_category_mega_menu(){
   if($has){
    echo '<div class="tt-mega-panel"><div class="tt-mega-inner"><div class="tt-mega-heading"><span>Shop kategori</span><strong>'.esc_html($parent->name).'</strong><a href="'.esc_url(get_term_link($parent)).'">Se alle →</a></div><div class="tt-mega-columns">';
    foreach($children as$child){
+    if(get_term_meta($child->term_id,'_tpm_show_mega',true)==='no')continue;
     $grand=get_terms(['taxonomy'=>'product_cat','hide_empty'=>false,'parent'=>$child->term_id,'orderby'=>'menu_order','order'=>'ASC']);if(is_wp_error($grand))$grand=[];
     echo '<div class="tt-mega-column"><a class="tt-mega-title" href="'.esc_url(get_term_link($child)).'">'.esc_html($child->name).'</a>';
-    if($grand){echo '<ul>';foreach($grand as$g)echo '<li><a href="'.esc_url(get_term_link($g)).'">'.esc_html($g->name).'</a></li>';echo '</ul>';}
+    if($grand){echo '<ul>';foreach($grand as$g){if(get_term_meta($g->term_id,'_tpm_show_mega',true)==='no')continue;echo '<li><a href="'.esc_url(get_term_link($g)).'">'.esc_html($g->name).'</a></li>';}echo '</ul>';}
     echo '</div>';
    }
    echo '</div></div></div>';
