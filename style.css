@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.4.4
+Version: 1.4.5
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -194,4 +194,33 @@ body.terttus-full-width .tt-elementor-content{width:100%}
  body.single-product .woocommerce-product-details__short-description{font-size:13px!important;line-height:1.45!important;color:#52636d!important}
  body.single-product .product_meta{font-size:11.5px!important;line-height:1.55!important;border-top:1px solid var(--tt-border);padding-top:10px!important}
  .single-product .onsale{top:8px!important;left:8px!important;min-width:42px!important;min-height:42px!important;line-height:42px!important;font-size:10px!important}
+}
+
+/* 1.4.5 keep long titles inside summary and polish quantity control */
+body.single-product .woocommerce div.product div.summary{min-width:0!important;box-sizing:border-box!important}
+body.single-product .woocommerce div.product .product_title{
+ width:100%!important;max-width:100%!important;box-sizing:border-box!important;
+ white-space:normal!important;overflow-wrap:break-word!important;word-break:normal!important;
+ hyphens:auto!important;
+}
+body.single-product .woocommerce div.product form.cart{display:flex!important;align-items:center!important;gap:10px!important;flex-wrap:wrap}
+body.single-product .woocommerce div.product form.cart .quantity{float:none!important;margin:0!important}
+body.single-product .woocommerce div.product form.cart .quantity .qty{
+ width:58px!important;height:42px!important;min-height:42px!important;
+ border:1px solid #d7e0e5!important;border-radius:9px!important;background:#fff!important;
+ padding:0 8px!important;text-align:center!important;font-size:14px!important;font-weight:700!important;
+ color:var(--tt-navy)!important;box-shadow:0 1px 2px rgba(16,33,45,.04)!important;
+}
+body.single-product .woocommerce div.product form.cart .single_add_to_cart_button{
+ min-height:42px!important;border-radius:9px!important;padding:10px 18px!important;
+}
+@media(min-width:901px){
+ body.single-product .woocommerce div.product div.summary{width:450px!important;max-width:450px!important}
+ body.single-product .woocommerce div.product .product_title{font-size:20px!important;line-height:1.16!important}
+}
+@media(max-width:900px){
+ body.single-product .woocommerce div.product div.summary{width:100%!important;max-width:100%!important}
+ body.single-product .woocommerce div.product .product_title{font-size:19px!important;line-height:1.16!important}
+ body.single-product .woocommerce div.product form.cart .quantity .qty{width:54px!important;height:40px!important;min-height:40px!important}
+ body.single-product .woocommerce div.product form.cart .single_add_to_cart_button{min-height:40px!important}
 }
