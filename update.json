@@ -1,7 +1,7 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Fjerner WooCommerce's ekstra arkivoverskrift, så kategorinavnet kun vises én gang.",
+  "description": "Retter lange produktnavne på desktop og mobil og viser alle Terttus Commerce-specifikationer på produktsiden.",
   "requires_php": "7.4"
 }
