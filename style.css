@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.3.1
+Version: 1.3.2
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -40,3 +40,15 @@ body.terttus-full-width .tt-elementor-content{width:100%}
 .tt-mega-columns{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:28px}.tt-mega-title{display:block!important;padding:0 0 8px!important;font-size:15px!important;color:var(--tt-navy)!important;font-weight:900!important}.tt-mega-column ul{display:block!important;padding:0!important;margin:0!important}.tt-mega-column li{border:0!important}.tt-mega-column li a{display:block!important;padding:5px 0!important;color:var(--tt-muted)!important;font-weight:600!important}.tt-mega-column li a:hover{color:var(--tt-teal)!important}.tt-mega-sale{margin-left:auto}.tt-mega-sale>a{color:var(--tt-orange)!important}
 @media(max-width:900px){.tt-category-nav{overflow:visible}.tt-category-nav.is-open{display:block}.tt-mega-root{display:block!important}.tt-mega-item>a{padding:13px 4px!important}.tt-mega-panel{position:static;box-shadow:none;border:0;border-top:1px solid var(--tt-border);background:var(--tt-bg)}.tt-mega-item:hover>.tt-mega-panel,.tt-mega-item:focus-within>.tt-mega-panel{display:block}.tt-mega-inner{width:100%;display:block;padding:16px}.tt-mega-heading{border:0;border-bottom:1px solid var(--tt-border);padding:0 0 14px;margin-bottom:16px}.tt-mega-heading strong{font-size:20px}.tt-mega-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.tt-mega-sale{margin-left:0}}
 @media(max-width:520px){.tt-mega-columns{grid-template-columns:1fr}}
+
+/* 1.3.2 shop archive polish + filters */
+.tt-shop-shell>.woocommerce-products-header{display:none}
+.tt-shop-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:22px 0 28px;padding:14px 16px;border:1px solid var(--tt-border);border-radius:14px;background:#fff}
+.tt-shop-toolbar .woocommerce-result-count,.tt-shop-toolbar .woocommerce-ordering{float:none!important;margin:0!important}
+.tt-shop-toolbar .woocommerce-result-count{color:var(--tt-muted);font-size:14px}
+.tt-shop-toolbar select{appearance:none;-webkit-appearance:none;min-width:220px;border:1px solid var(--tt-border);border-radius:10px;background:#f8fafb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2310212d' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 13px center;color:var(--tt-navy);font:inherit;font-weight:700;padding:10px 40px 10px 13px;outline:0}
+.tt-shop-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:32px;align-items:start}
+.tt-shop-filters{border:1px solid var(--tt-border);border-radius:16px;background:#fff;padding:20px;position:sticky;top:24px}
+.tt-shop-filters h2{font-size:20px;margin:0 0 18px}.tt-filter-group{padding:16px 0;border-top:1px solid var(--tt-border)}.tt-filter-group:first-of-type{border-top:0;padding-top:0}.tt-filter-group h3{font-size:14px;margin:0 0 10px}.tt-filter-list{list-style:none;margin:0;padding:0}.tt-filter-list li{margin:7px 0}.tt-filter-list a{text-decoration:none;color:var(--tt-muted);font-size:14px}.tt-filter-list a:hover,.tt-filter-list a.is-active{color:var(--tt-teal);font-weight:800}.tt-filter-price{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tt-filter-price input{width:100%;border:1px solid var(--tt-border);border-radius:9px;padding:9px}.tt-filter-submit{width:100%;margin-top:10px;cursor:pointer}.tt-filter-clear{display:block;margin-top:12px;text-align:center;font-size:13px}
+.tt-shop-products ul.products{width:100%}
+@media(max-width:900px){.tt-shop-layout{grid-template-columns:1fr}.tt-shop-filters{position:static}.tt-shop-toolbar{align-items:stretch;flex-direction:column}.tt-shop-toolbar select{width:100%}}
