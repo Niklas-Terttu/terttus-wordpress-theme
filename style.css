@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.4.0
+Version: 1.4.1
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -120,3 +120,18 @@ body.terttus-full-width .tt-elementor-content{width:100%}
 .woocommerce ul.products li.product .woocommerce-loop-product__title{overflow-wrap:anywhere;word-break:normal;hyphens:auto;line-height:1.28;min-height:2.56em}
 .woocommerce ul.products li.product{min-width:0;overflow:hidden}
 .woocommerce ul.products li.product a{min-width:0}
+
+/* 1.4.1 product title and specification layout */
+.single-product .woocommerce div.product .summary{min-width:0!important}
+.single-product .woocommerce div.product .product_title{max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto}
+.tt-product-specs{clear:both;width:100%;margin:34px 0 20px;padding:0;grid-column:1/-1}
+.tt-product-specs h2{font-size:24px;margin:0 0 16px;color:var(--tt-navy)}
+.tt-spec-table{border:1px solid var(--tt-border);border-radius:14px;overflow:hidden;background:#fff}
+.tt-spec-row{display:grid;grid-template-columns:minmax(180px,34%) 1fr;border-bottom:1px solid var(--tt-border)}
+.tt-spec-row:last-child{border-bottom:0}.tt-spec-name,.tt-spec-value{padding:12px 16px;font-size:14px;line-height:1.45}
+.tt-spec-name{font-weight:750;background:#f7f9fa;color:var(--tt-navy)}.tt-spec-value{color:var(--tt-muted);overflow-wrap:anywhere}
+@media(max-width:900px){
+ body.single-product .woocommerce div.product .summary{width:100%!important;max-width:100%!important;box-sizing:border-box!important;overflow:hidden}
+ body.single-product .woocommerce div.product .product_title{font-size:clamp(24px,8vw,34px)!important;line-height:1.15!important;width:100%!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important}
+ .tt-product-specs{margin-top:24px}.tt-product-specs h2{font-size:21px}.tt-spec-row{grid-template-columns:1fr}.tt-spec-name{padding-bottom:5px}.tt-spec-value{padding-top:5px}
+}
