@@ -1,7 +1,7 @@
 {
-  "version": "1.3.9",
+  "version": "1.4.0",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Tilføjer manuel Søg efter opdatering-knap til Terttus Theme under Udseende → Temaer.",
+  "description": "Fjerner WooCommerce's ekstra arkivoverskrift, så kategorinavnet kun vises én gang.",
   "requires_php": "7.4"
 }
