@@ -1,7 +1,7 @@
 {
-  "version": "1.5.0",
+  "version": "1.5.1",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Viser Fjernlager på produktkort, når eget lager er tomt og varen er tilgængelig på leverandørens fjernlager.",
+  "description": "Centrerer hele kategorimenuen korrekt som én samlet gruppe, inklusive Tilbud.",
   "requires_php": "7.4"
 }
