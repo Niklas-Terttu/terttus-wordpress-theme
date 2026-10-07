@@ -1,1 +1,7 @@
-{"version":"1.3.5","download_url":"https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip","details_url":"https://github.com/Niklas-Terttu/terttus-wordpress-theme","description":"Makes the desktop single-product composition visibly smaller with fixed compact gallery and summary widths, reduced image height, typography and spacing.","requires_php":"7.4"}
+{
+  "version": "1.3.6",
+  "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
+  "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
+  "description": "Mega-menuen respekterer nu kategoriindstillingen Vis i mega-menu fra Terttus Commerce.",
+  "requires_php": "7.4"
+}
