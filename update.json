@@ -1,7 +1,7 @@
 {
-  "version": "1.4.6",
+  "version": "1.4.7",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Retter den faktiske grid-overflow bag lange produktnavne og målretter WooCommerce antal-input direkte med nyt kompakt design.",
+  "description": "Bruger præcise WooCommerce-selektorer til at holde selv ubrudte produktnavne inde i købskortet og nulstiller browserens standarddesign på antal-feltet.",
   "requires_php": "7.4"
 }
