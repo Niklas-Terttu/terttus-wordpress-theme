@@ -1,7 +1,7 @@
 {
-  "version": "1.4.3",
+  "version": "1.4.4",
   "download_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme/archive/refs/heads/main.zip",
   "details_url": "https://github.com/Niklas-Terttu/terttus-wordpress-theme",
-  "description": "Forfiner produktsiden med kompakt galleri, bredere købskolonne, mindre produktnavn, diskret metadata og bedre tilbudsbadge.",
+  "description": "Gør manuel temasøgning øjeblikkelig ved at omgå GitHub/CDN-cache. Indeholder også det kompakte produktlayout fra 1.4.3.",
   "requires_php": "7.4"
 }
