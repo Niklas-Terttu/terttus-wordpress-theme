@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.4.1
+Version: 1.4.2
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -134,4 +134,37 @@ body.terttus-full-width .tt-elementor-content{width:100%}
  body.single-product .woocommerce div.product .summary{width:100%!important;max-width:100%!important;box-sizing:border-box!important;overflow:hidden}
  body.single-product .woocommerce div.product .product_title{font-size:clamp(24px,8vw,34px)!important;line-height:1.15!important;width:100%!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important}
  .tt-product-specs{margin-top:24px}.tt-product-specs h2{font-size:21px}.tt-spec-row{grid-template-columns:1fr}.tt-spec-name{padding-bottom:5px}.tt-spec-value{padding-top:5px}
+}
+
+/* 1.4.2 compact product presentation */
+@media(min-width:901px){
+ body.single-product .tt-shop-shell{max-width:1080px!important}
+ body.single-product .woocommerce div.product{grid-template-columns:500px 420px!important;column-gap:38px!important}
+ body.single-product .woocommerce div.product div.images{width:500px!important;max-width:500px!important}
+ body.single-product .woocommerce div.product div.images .woocommerce-product-gallery__wrapper{min-height:300px!important;max-height:330px!important}
+ body.single-product .woocommerce div.product div.images img{max-width:450px!important;max-height:315px!important}
+ body.single-product .woocommerce div.product div.summary{width:420px!important;max-width:420px!important;padding:16px 18px!important}
+ body.single-product .woocommerce div.product .product_title{font-size:23px!important;line-height:1.12!important;margin-bottom:12px!important}
+ body.single-product .woocommerce div.product p.price,body.single-product .woocommerce div.product span.price{font-size:19px!important}
+ body.single-product .woocommerce-product-details__short-description{font-size:13px!important;line-height:1.45!important}
+}
+.woocommerce ul.products li.product,.woocommerce-page ul.products li.product{box-sizing:border-box;overflow:visible}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{font-size:16px!important;line-height:1.18!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto;margin-bottom:10px!important}
+.woocommerce ul.products li.product .price{font-size:16px!important;line-height:1.2!important}
+.woocommerce ul.products li.product .button{font-size:14px!important;padding:10px 14px!important}
+.woocommerce ul.products li.product .onsale{top:10px!important;right:10px!important;left:auto!important;margin:0!important;min-width:48px!important;min-height:48px!important;line-height:48px!important;font-size:12px!important;z-index:3}
+@media(max-width:900px){
+ .woocommerce ul.products{gap:14px!important}
+ .woocommerce ul.products li.product,.woocommerce-page ul.products li.product{padding:14px!important}
+ .woocommerce ul.products li.product img{max-height:190px!important;object-fit:contain!important;margin-bottom:12px!important}
+ .woocommerce ul.products li.product .woocommerce-loop-product__title{font-size:15px!important;line-height:1.16!important}
+ .woocommerce ul.products li.product .price{font-size:15px!important}
+ .woocommerce ul.products li.product .button{font-size:13px!important;padding:9px 12px!important}
+ .woocommerce ul.products li.product .onsale{top:8px!important;right:8px!important;min-width:44px!important;min-height:44px!important;line-height:44px!important;font-size:11px!important}
+}
+@media(max-width:520px){
+ body.single-product .tt-shop-shell{padding-left:14px!important;padding-right:14px!important}
+ body.single-product .woocommerce div.product div.images img{max-height:300px!important}
+ body.single-product .woocommerce div.product div.summary{padding:14px!important}
+ body.single-product .woocommerce div.product .product_title{font-size:22px!important;line-height:1.12!important}
 }
