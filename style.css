@@ -3,7 +3,7 @@ Theme Name: Terttus
 Theme URI: https://github.com/Niklas-Terttu/terttus-wordpress-theme
 Author: Terttus
 Description: Custom WooCommerce theme for Terttus.dk.
-Version: 1.5.0
+Version: 1.5.1
 Text Domain: terttus
 Requires at least: 6.4
 Requires PHP: 7.4
@@ -300,3 +300,10 @@ body.single-product form.cart div.quantity input[type="number"].qty{
 
 /* 1.5.0 remote stock state */
 .woocommerce ul.products li.product .tt-loop-stock-remote{color:var(--tt-orange)!important}
+
+/* 1.5.1 truly center category nav, including Tilbud */
+@media(min-width:901px){
+ .tt-category-nav>.tt-container{display:flex!important;justify-content:center!important}
+ .tt-category-nav .tt-mega-root{display:inline-flex!important;width:auto!important;justify-content:center!important;margin:0 auto!important}
+ .tt-category-nav .tt-mega-sale{margin-left:0!important}
+}
