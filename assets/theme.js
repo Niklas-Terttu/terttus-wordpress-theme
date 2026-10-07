@@ -1,1 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('terttus-ready');const b=document.querySelector('.tt-mobile-toggle'),n=document.querySelector('#tt-primary-nav');if(b&&n)b.addEventListener('click',function(){const o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',o?'true':'false')});});
+document.addEventListener('DOMContentLoaded',function(){
+ const items=[...document.querySelectorAll('.tt-mega-item.has-children')];
+ items.forEach(function(item){const trigger=item.querySelector(':scope > .tt-mega-trigger');if(!trigger)return;trigger.addEventListener('click',function(e){e.preventDefault();const opening=!item.classList.contains('is-menu-open');items.forEach(function(other){other.classList.remove('is-menu-open');const b=other.querySelector(':scope > .tt-mega-trigger');if(b)b.setAttribute('aria-expanded','false')});if(opening){item.classList.add('is-menu-open');trigger.setAttribute('aria-expanded','true')}})});
+ document.addEventListener('click',function(e){if(e.target.closest('.tt-mega-item.has-children'))return;items.forEach(function(item){item.classList.remove('is-menu-open');const b=item.querySelector(':scope > .tt-mega-trigger');if(b)b.setAttribute('aria-expanded','false')})});
+});
